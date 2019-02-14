@@ -1,0 +1,52 @@
+<br>
+<div class="container">
+  <div class="box resizeBox">
+    <div class="form-group">
+      <label for="usr">Username</label>
+      <input type="text" class="form-control input" [(ngModel)]="username" id="inputusername">
+      <p class="help is-danger" id="pTagUsername" style="display:none">This username not available</p>
+    </div>
+    <div class="form-group">
+      <label for="usr">Email</label>
+      <input type="text" class="form-control input" [(ngModel)]="email" id="inputemail">
+      <p class="help is-danger" id="pTagEmail" style="display:none">This email is invalid</p>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password</label>
+      <input type="password" class="form-control input " [(ngModel)]="password" id="inputpassword">
+      <p class="help is-danger" id="pTagPassword" style="display:none">This password isn't match</p>
+    </div>
+    <div class="form-group">
+      <label for="cfped">Confirm Password</label>
+      <input type="password" class="form-control input " [(ngModel)]="cfpassword" id="inputcfpassword">
+      <p class="help is-danger" id="pTagCFPassword" style="display:none">This password isn't match</p>
+    </div>
+    <div class="form-group">
+      <label for="usr">First Name</label>
+      <input type="text" class="form-control input" [(ngModel)]="firstname" id="inputfirstname">
+    </div>
+    <div class="form-group">
+      <label for="usr">Last Name</label>
+      <input type="text" class="form-control input" [(ngModel)]="lastname" id="inputlastname">
+    </div>
+
+    <div class="form-group">
+      <button type="button" class="button is-dark is-fullwidth" (click)="onSubmit()">Sign Up</button>
+    </div>
+
+  </div>
+  <div class=" box resizeBox" id="pJson" style="display:none">
+    <p>
+      {{ '{' }}<br>
+      'username': '{{this.username}}' , <br>
+      'email': '{{this.email}}' ,<br>
+      'password': '{{this.password}}' , <br>
+      'firstname': '{{this.firstname}}' , <br>
+      'lastname': '{{this.lastname}}' <br>
+      {{ '}' }}
+    </p>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
